@@ -1,6 +1,42 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Pricing of Sonic Skiing";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Want to come learn with us? Check out our pricing!</p>
+<br />
+
+<!--pricing calculator! should include 
+        input box for user
+        fixed box for my pricing
+        output box for calculation -->
+<form>
+    <!-- input box label-->
+    <label>Enter in how many hours you would like to ski with us:</label>
+    <br/>
+
+    <!-- input box, restrict to positive numbers only-->
+    <input id="txtFrom" type="number" min="1" step="1" placeholder="Enter hours"/>
+    <br/>
+    <br/>
+
+    <!-- fixed value box for my pricing-->
+    <label for="fixedValue">Our Pricing (per hour):</label>
+    <br/>
+    <div id="fixedValue">$120</div>
+    <br/>
+    
+    <!--calculate button-->
+    <label>Calculate your price:</label>
+    <br/>
+    <input type="button" value="Calculate" id="btnSubmit"/>
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- output box for the calculation-->
+    <label for="outputValue">Your total cost: </label>
+    <output id="outputValue" placeholder="Total Cost"></output>
+
+    <br/>
+</form>
