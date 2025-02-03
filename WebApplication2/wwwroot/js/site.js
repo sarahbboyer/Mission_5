@@ -13,7 +13,8 @@ $(document).ready(function() {
             
             //once this input is valid, send it back to the output box
             var output = userInput * 120;
-            $('#outputValue').text(output);
+            var formattedOutput = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(output);
+            $('#outputValue').text(formattedOutput);
             
             //error handling, should only be a positive number, let user reinput if invalid
         } else {
